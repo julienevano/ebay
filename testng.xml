@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestLogin" thread-count="2" parallel="tests">
+    <listeners>
+        <listener class-name="Base.CustomizeTestNgReport"/>
+    </listeners>
+    <test name="chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.CheckoutTests.Tests"/>
+        </classes>
+    </test>
+
+    <test name="Firefox">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="tests.CheckoutTests.Tests"/>
+        </classes>
+    </test>
+</suite>
